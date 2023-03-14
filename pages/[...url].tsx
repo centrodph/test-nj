@@ -1,10 +1,11 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import Banner from "../components/Banner/Banner";
 import { cleanPath, pathToUrl } from "../helpers/cleanUrl";
 import { getEntry } from "../helpers/getEntry";
 import { getUrls } from "../helpers/getUrls";
+import * as S from "../components/Common/PageLayout.styles";
 
 /**
  =========fallback: false
@@ -92,7 +93,7 @@ export default function ArticleId(
   const router = useRouter();
 
   return (
-    <div>
+    <S.Content>
       <Head>
         <title></title>
         <meta name="description" content="Test NJ: 02282023" />
@@ -109,6 +110,7 @@ export default function ArticleId(
         {props.data?.description}
       </div>
 
+      <Banner data={props.data?.banner} />
       <button className="back-btn" onClick={() => router.back()}>
         Back
       </button>
@@ -125,6 +127,6 @@ export default function ArticleId(
           </div>
         );
       })}
-    </div>
+    </S.Content>
   );
 }

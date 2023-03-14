@@ -10,6 +10,9 @@ const nextConfig = {
     EXAMPLE_TYPE: process.env.EXAMPLE_TYPE,
     ARTICLE: 9900,
   },
+  images: {
+    domains: ['images.contentstack.io'],
+  }
 };
 
 module.exports = nextConfig;
