@@ -32,7 +32,7 @@ export default function List({
   return (
     <div>
       <Head>
-        <title>{process.env.EXAMPLE_TYPE}::Articles</title>
+        <title>{`${process.env.EXAMPLE_TYPE}::Articles`}</title>
         <meta
           name="description"
           content={`${process.env.EXAMPLE_TYPE}::Articles`}
